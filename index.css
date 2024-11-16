@@ -1,0 +1,317 @@
+/* body {
+   background-color: black;
+   color: white;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   padding: 20px;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+header a, header button {
+   display: inline-block;
+}
+
+.menuButton {
+   display: inline-block;
+   padding: 10px 20px;
+   color: #fff;
+   border: 2px solid black;
+   border-radius: 5px;
+   text-decoration: none;
+   font-size: 20px;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+#hb1 {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+#hb1 img {
+   width: 100px;
+   height: auto;
+} */
+body {
+   background-color: black;
+   color: white;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   width: 100%;
+}
+
+.burger-menu {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+}
+
+.burger-menu .line {
+   width: 25px;
+   height: 3px;
+   background-color: white;
+   margin: 4px 0;
+}
+
+.menu {
+   display: flex;
+   gap: 20px;
+}
+
+.menuButton {
+   display: inline-block;
+   padding: 10px 20px;
+   color: #fff;
+   border: 2px solid black;
+   border-radius: 5px;
+   text-decoration: none;
+   font-size: 20px;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+#hb1 {
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+}
+
+#hb1 img {
+   width: 100px;
+   height: auto;
+}
+
+@media (max-width: 850px) {
+   .burger-menu {
+      display: flex;
+   }
+
+   #maga {
+      margin-right: 50px;
+   }
+
+   .menu {
+      display: none;
+      /* Скрыть меню по умолчанию */
+      flex-direction: column;
+      position: absolute;
+      top: 115px;
+      /* Выставьте нужное значение */
+      left: 0;
+      width: 100%;
+      background-color: black;
+      z-index: 1;
+   }
+
+   .menu.active {
+      display: flex;
+      /* Показать меню при активации */
+   }
+}
+
+@media (max-width: 756px) {
+   header {
+      /* justify-content: center; */
+   }
+
+   .menuButton {
+      font-size: 16px;
+   }
+}
+
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin: 20px;
+}
+
+.container>div {
+   flex: 1 1 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.baic img,
+.baic1 img,
+.baic2 img,
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+   .container>div {
+      flex: 1 1 45%;
+   }
+}
+
+@media (min-width: 1024px) {
+   .container>div {
+      flex: 1 1 22%;
+   }
+}
+
+.top,
+.top1,
+.top2 {
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 900;
+   font-size: 80px;
+   line-height: 1.2;
+   margin: 40px 0;
+}
+
+.top1 {
+   color: #ff0000;
+}
+
+.text,
+.text1,
+.text2,
+.fonar1,
+.fol1 {
+   max-width: 90%;
+   margin: 20px auto;
+   text-align: center;
+   font-family: 'Raleway', sans-serif;
+   font-size: 24px;
+   line-height: 1.5;
+   opacity: 0.8;
+}
+
+.image-container {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 20px;
+   margin: 20px;
+}
+
+.image-container div {
+   flex: 1 1 30%;
+   display: flex;
+   justify-content: center;
+}
+
+.kio-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.kio-container div {
+   flex: 1 1 30%;
+}
+
+.git {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+   margin: 40px 0;
+}
+
+.git div {
+   text-align: center;
+}
+
+@media (max-width: 1024px) {
+
+   .top,
+   .top1,
+   .top2 {
+      font-size: 60px;
+   }
+
+   .text,
+   .text1,
+   .text2,
+   .fonar1,
+   .fol1 {
+      font-size: 18px;
+   }
+}
+
+@media (max-width: 768px) {
+
+   .top,
+   .top1,
+   .top2 {
+      font-size: 40px;
+   }
+
+   .container {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .text,
+   .text1,
+   .text2,
+   .fonar1,
+   .fol1 {
+      font-size: 16px;
+      text-align: center;
+   }
+
+   .menuButton {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 600px) {
+   img {
+      display: block;
+      margin: 0 auto;
+   }
+}
+
+@media (max-width: 400px) {
+
+   .container,
+   .image-container,
+   .kio-container,
+   .git {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .container>div,
+   .image-container div,
+   .kio-container div,
+   .git div {
+      flex: 1 1 100%;
+   }
+
+   img {
+      max-width: 90%;
+   }
+}
